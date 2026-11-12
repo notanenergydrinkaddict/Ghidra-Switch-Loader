@@ -29,6 +29,8 @@ jobs:
           distribution: "temurin"
           java-version: "21"
 
+      - uses: gradle/actions/setup-gradle@v3
+
       - name: Setup Ghidra ${{ matrix.ghidra }}
         uses: antoniovazquezblanco/setup-ghidra@v2.2.1
         with:
