@@ -36,7 +36,7 @@ else {
 
 def getGitHash = {
     def stdout = new ByteArrayOutputStream()
-    exec {
+    providers.exec {
         if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
             commandLine 'cmd', '/c', 'git', 'rev-parse', '--short', 'HEAD'
         } else {
